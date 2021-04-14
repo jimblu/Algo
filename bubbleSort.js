@@ -1,4 +1,4 @@
-const bubbleSort = (arr, indexOne, indexTwo) => {
+const bubbleSort = (arr) => {
     let swapping = true;
     let swap = 0;
     while (swapping) {
