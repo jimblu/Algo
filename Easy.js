@@ -1,29 +1,22 @@
-const mergeSort = (startArray) => {
-  const length = startArray.length;
-  if (length === 1) {
-    return startArray;
-  }
-  const mid = Math.floor(length / 2);
-  const leftArray = startArray.slice(0, mid);
-  const rightArray = startArray.slice(mid, length);
-
-  return merge(mergeSort(leftArray), mergeSort(rightArray))
+//Convert Celsius to Fahrenheit
+function convertToF(celsius) {
+  let fahrenheit = (celsius*(9/5)) + 32;
+  return fahrenheit;
 }
 
-const merge = (leftArray, rightArray) => {
-  const sortedArray = [];
-  while (leftArray.length > 0 && rightArray.length > 0) {
-    if (leftArray[0] < rightArray[0]) {
-      sortedArray.push(leftArray[0]);
-      leftArray.shift();
-    } else {
-      sortedArray.push(rightArray[0]);
-      rightArray.shift();
-    }
-  }
-  return sortedArray.concat(leftArray).concat(rightArray);
+//Reverse a String
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
-
-const inputArr = [3, 5, 2, 90, 4, 7, 56, 34, 101, 1, 8];
-console.log(mergeSort(inputArr));
+//Factorialize a Number
+function factorialize(num) {
+  if (num === 0) {
+    return 1;
+  }
+  let factNum = num
+  for (let i = 1; i < num; i++) {
+    factNum *= num - i;
+  }
+  return factNum;
+}
