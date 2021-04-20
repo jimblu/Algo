@@ -51,3 +51,17 @@ function confirmEnding(str, target) {                     /*OR*/  str.endsWith(t
 }
 console.log(confirmEnding("Bastian", "n"));
 console.log(confirmEnding("Congratulation", "on"));
+
+//Repeat a String Repeat a String
+function repeatStringNumTimes(str, num) {                 /*OR*/ str.repeat(num);
+  if (num <= 0) {
+    return '';
+  }
+  let arr = [str];
+  for (let i = 1; i < num; i++) {
+    arr.push(str)
+  }
+  let repeatStr = arr.join('');
+  return repeatStr;
+}
+repeatStringNumTimes("abc", 3);
