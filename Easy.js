@@ -65,3 +65,15 @@ function repeatStringNumTimes(str, num) {                 /*OR*/ str.repeat(num)
   return repeatStr;
 }
 repeatStringNumTimes("abc", 3);
+
+//Truncate a String
+function truncateString(str, num) {
+  if (num >= str.length) {
+    return str;
+  }
+  let arr = str.split('');
+  let truncStr = arr.splice(0, num).join('');
+  return truncStr + '...';
+}
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
+
